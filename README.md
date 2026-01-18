@@ -1,5 +1,6 @@
 # Hyprlain-Minimalistic
-My minimalistic version of Hyprlain rice.
+My minimalistic version of [this](https://github.com/Ascaniolamp/Hyprlain) rice. Most of configs and color pallete were taken from this repository.
+Telegram-Desktop, qbittorrent and PrismLauncher themes created by me using AI (Mostly Gemini 3).
 
 ## License
 <div align="center">
