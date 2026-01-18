@@ -1,0 +1,120 @@
+/* stylesheet.qss
+   Использует цвета вашей палитры (подставлены хексы).
+   Подправьте селекторы/размеры по вкусу.
+*/
+
+/* --- Base UI --- */
+QWidget, QMainWindow {
+    background-color: #000000;             /* --backprimary */
+    color: #ce7688;                        /* --foreprimary */
+}
+
+/* Main central widgets (lists, tables) */
+QTreeView, QTableView, QListView, QPlainTextEdit, QTextEdit {
+    background-color: #1a1a1a;             /* --backsecondary (Base) */
+    alternate-background-color: #2a2a2a;   /* --backtertiary (AlternateBase) */
+    color: #ba6a7b;                        /* --foresecondary (Text) */
+    selection-background-color: #c1b48e;   /* --highprimary (Highlight) */
+    selection-color: #1d0f12;              /* --foreduodenary (HighlightedText) */
+    outline: none;
+}
+
+/* Headers (table headers, list headers) */
+QHeaderView::section {
+    background-color: #3a3a3a;             /* --backquaternary */
+    color: #ce7688;                        /* --foreprimary */
+    padding: 4px;
+    border: 1px solid #4a4a4a;             /* --backquinary */
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #3a3a3a;             /* --backquaternary */
+    color: #ce7688;                        /* --foreprimary */
+    border: 1px solid #4a4a4a;             /* --backquinary */
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+QPushButton:hover {
+    background-color: #4a4a4a;             /* hover -> --backquinary */
+}
+
+QPushButton:pressed {
+    background-color: #2a2a2a;             /* pressed -> --backtertiary */
+}
+
+/* Toolbars and Menubar */
+QToolBar, QMenuBar {
+    background-color: #000000;             /* --backprimary */
+    color: #ce7688;                        /* --foreprimary */
+    border: none;
+}
+
+/* Menus */
+QMenu {
+    background-color: #1a1a1a;             /* --backsecondary */
+    color: #ba6a7b;                        /* --foresecondary */
+    border: 1px solid #3a3a3a;
+}
+
+/* Tabs */
+QTabWidget::pane {
+    background: #000000;                   /* --backprimary */
+    border: 1px solid #3a3a3a;
+}
+QTabBar::tab {
+    background: #2a2a2a;                   /* --backtertiary */
+    color: #ba6a7b;
+    padding: 6px;
+    margin-right: 2px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+QTabBar::tab:selected {
+    background: #3a3a3a;                   /* --backquaternary */
+    color: #ce7688;
+}
+
+/* Progress bars (трафик / прогресс) */
+QProgressBar {
+    background-color: #1a1a1a;             /* --backsecondary */
+    color: #ba6a7b;
+    border: 1px solid #3a3a3a;
+    text-align: center;
+}
+QProgressBar::chunk {
+    background-color: #c1b48e;             /* --highprimary */
+}
+
+/* Line edits / inputs */
+QLineEdit, QComboBox, QSpinBox {
+    background-color: #1a1a1a;             /* --backsecondary */
+    color: #ba6a7b;
+    border: 1px solid #3a3a3a;
+    padding: 4px;
+}
+
+/* Labels and small text */
+QLabel {
+    color: #ba6a7b;                        /* --foresecondary */
+}
+
+/* Disabled state */
+QWidget[enabled="false"], QLabel[enabled="false"] {
+    color: #1d0f12;                        /* --foreduodenary (darker/disabled) */
+}
+
+/* Tooltips */
+QToolTip {
+    background-color: #c1b48e;             /* --highprimary */
+    color: #1d0f12;                        /* --foreduodenary */
+    border: 1px solid #968c6e;             /* --highquaternary */
+    padding: 6px;
+}
+
+/* Misc: splitters, frames */
+QSplitter, QFrame {
+    background-color: transparent;
+}
+

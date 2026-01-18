@@ -1,0 +1,30 @@
+{
+  "name": "Custom-Pink-Black",
+  "author": "generated-by-assistant",
+  "version": "1.0",
+  "colors": {
+    "Palette.Window": "#000000",
+    "Palette.WindowText": "#ce7688",
+    "Palette.Base": "#1a1a1a",
+    "Palette.AlternateBase": "#2a2a2a",
+    "Palette.Text": "#ba6a7b",
+    "Palette.ToolTipBase": "#c1b48e",
+    "Palette.ToolTipText": "#1d0f12",
+    "Palette.BrightText": "#ffffff",
+    "Palette.Highlight": "#c1b48e",
+    "Palette.HighlightedText": "#1d0f12",
+    "Palette.Button": "#3a3a3a",
+    "Palette.ButtonText": "#ce7688",
+    "Palette.Link": "#965363",
+    "Palette.LinkVisited": "#8e4e5d",
+    "Palette.Light": "#4a4a4a",
+    "Palette.Midlight": "#5a5a5a",
+    "Palette.Mid": "#6a6a6a",
+    "Palette.Dark": "#7a7a7a",
+    "Palette.Shadow": "#8a8a8a",
+    "Palette.WindowTextDisabled": "#1d0f12",
+    "Palette.TextDisabled": "#1d0f12",
+    "Palette.ToolTipTextDisabled": "#1d0f12"
+  }
+}
+

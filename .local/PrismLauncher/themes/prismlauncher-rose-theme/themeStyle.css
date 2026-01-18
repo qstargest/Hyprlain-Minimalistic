@@ -1,0 +1,228 @@
+/* Theme: Rose Noir (Prism Launcher)
+   Palette taken from user-provided CSS variables.
+   Note: QSS doesn't support CSS variables, so we expand them inline below.
+*/
+
+/* Palette (for reference)
+:root {
+    --backprimary: #000000;
+    --backsecondary: #1a1a1a;
+    --backtertiary: #2a2a2a;
+    --backquaternary: #3a3a3a;
+    --backquinary: #4a4a4a;
+    --backsenary: #5a5a5a;
+    --backseptenary: #6f3d49; /* note: using mid rose shades for accents */
+    --backoctonary: #7a6a6a;
+    --backnonary: #8a8a8a;
+    --backdecenary: #9a9a9a;
+    --backundenary: #aaaaaa;
+    --backduodenary: #bababa;
+
+    --foreprimary: #ce7688;
+    --foresecondary: #ba6a7b;
+    --foretertiary: #a05969;
+    --forequaternary: #965363;
+    --forequinary: #8e4e5d;
+    --foresenary: #804654;
+    --foreseptenary: #6f3d49;
+    --foreoctonary: #5d333c;
+    --forenonary: #49272f;
+    --foredecenary: #381e24;
+
+    --highprimary: #c1b48e;
+    --highsecondary: #b5a985;
+    --hightertiary: #a49978;
+    --highquaternary: #968c6e;
+    --highquinary: #897f63;
+    --highsenary: #7a7158;
+    --highseptenary: #69614c;
+    --highoctonary: #5a5341;
+    --highnonary: #4e4838;
+}
+*/
+
+/* Base window */
+QWidget, QMainWindow {
+  background-color: #000000; /* --backprimary */
+  color: #ce7688; /* --foreprimary */
+  selection-background-color: #c1b48e; /* --highprimary */
+  selection-color: #000000;
+  font-family: "Segoe UI", "Roboto", "Sans-Serif";
+}
+
+/* Menubar & Menus */
+QMenuBar {
+  background-color: #1a1a1a; /* --backsecondary */
+  color: #ce7688;
+  padding: 4px;
+}
+QMenuBar::item:selected {
+  background-color: #2a2a2a;
+  color: #c1b48e;
+}
+QMenu {
+  background-color: #1a1a1a;
+  color: #ce7688;
+  border: 1px solid #2a2a2a;
+}
+
+/* Toolbars */
+QToolBar {
+  background-color: qlineargradient(x1:0,y1:0,x2:0,y2:1, stop:0 #1a1a1a, stop:1 #2a2a2a);
+  spacing: 6px;
+  border: none;
+}
+QToolButton {
+  background: transparent;
+  color: #ce7688;
+  padding: 6px;
+  border-radius: 6px;
+}
+QToolButton:hover {
+  background-color: rgba(193,180,142,0.08); /* --highprimary with alpha */
+}
+QToolButton:pressed {
+  background-color: rgba(193,180,142,0.14);
+}
+
+/* Buttons */
+QPushButton {
+  background-color: #2a2a2a; /* --backtertiary */
+  color: #ce7688;
+  border: 1px solid #3a3a3a;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+QPushButton:hover {
+  background-color: #3a3a3a;
+}
+QPushButton:pressed {
+  background-color: #262626;
+}
+
+/* Tabs */
+QTabWidget::pane { border: 1px solid #2a2a2a; }
+QTabBar::tab {
+  background: #1a1a1a;
+  color: #ce7688;
+  padding: 8px;
+  margin-right: 2px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+QTabBar::tab:selected {
+  background: #2a2a2a;
+  color: #c1b48e;
+}
+
+/* List / Tree views (instances, mods, etc) */
+QListView, QTreeView, QTableView, QAbstractItemView {
+  background-color: #0a0a0a;
+  alternate-background-color: #1a1a1a;
+  color: #ce7688;
+  border: none;
+  outline: none;
+}
+QListView::item:selected, QTreeView::item:selected, QTableView::item:selected {
+  background-color: #c1b48e; /* highlight */
+  color: #000000;
+}
+
+/* Line edits and text edits */
+QLineEdit, QComboBox, QSpinBox {
+  background-color: #1a1a1a;
+  color: #ce7688;
+  border: 1px solid #2a2a2a;
+  padding: 6px;
+  border-radius: 6px;
+}
+QTextEdit, QPlainTextEdit {
+  background-color: #0f0f0f;
+  color: #ce7688;
+  border: 1px solid #2a2a2a;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+/* Tooltips */
+QToolTip {
+  background-color: #2a2a2a;
+  color: #ce7688;
+  border: 1px solid #3a3a3a;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+  background: #1a1a1a;
+  width: 12px;
+  margin: 16px 0 16px 0;
+  border-radius: 6px;
+}
+QScrollBar::handle:vertical {
+  background: #3a3a3a;
+  min-height: 20px;
+  border-radius: 6px;
+}
+QScrollBar::add-line, QScrollBar::sub-line { height: 0px; }
+
+/* Progress bar */
+QProgressBar {
+  background-color: #1a1a1a;
+  color: #ce7688;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  text-align: center;
+}
+QProgressBar::chunk {
+  background-color: #c1b48e;
+}
+
+/* Status bar */
+QStatusBar {
+  background-color: #1a1a1a;
+  color: #ce7688;
+  border-top: 1px solid #2a2a2a;
+}
+
+/* Dialogs and frames */
+QDialog, QFrame {
+  background-color: #0b0b0b;
+  color: #ce7688;
+  border-radius: 6px;
+}
+
+/* Small helpers */
+a, QLabel {
+  color: #ba6a7b;
+}
+QLabel#subtitle {
+  color: #a05969;
+  font-size: 12px;
+}
+
+/* Customize instance card (common custom widgets) */
+InstanceCard, .instanceCard {
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  color: #ce7688;
+}
+InstanceCard[selected="true"], .instanceCard[selected="true"] {
+  background: qlineargradient(x1:0,y1:0,x2:0,y2:1, stop:0 #2a2a2a, stop:1 #3a3a3a);
+  border: 1px solid #c1b48e;
+}
+
+/* Logs (console) */
+QPlainTextEdit#logConsole {
+  background-color: #0b0b0b;
+  color: #ce7688;
+  border: 1px solid #2a2a2a;
+}
+
+/* Fallback - ensure disabled widgets are legible */
+:disabled {
+  color: #5a5a5a;
+  background-color: #0f0f0f;
+}

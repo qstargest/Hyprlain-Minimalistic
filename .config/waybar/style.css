@@ -1,0 +1,114 @@
+* {
+	font-family:
+		"AdwaitaMono Nerd Font",
+		"IPAexGothic",
+		"Noto Sans",
+		"Noto Sans Extra",
+		"Noto Sans Emoji";
+	font-size: 13px;
+	font-weight: bold;
+	color: #C1B48E;
+}
+
+window#waybar {
+	background-color: #000000;
+	border: solid #CE7688;
+	border-width: 0px 2px 2px 2px;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+}
+
+button,
+button:hover,
+#workspaces #workspaces button,
+#workspaces button:hover {
+	color: #C1B48E;
+	padding: 0px 2px 0px 2px;
+	margin: 0px;
+	border: none;
+	background: inherit;
+	background-color: transparent;
+	box-shadow: inset 0px 0px 0px 0px #CE7688;
+}
+
+#workspaces button:active,
+#workspaces button.active {
+    text-shadow: 0.5px 0.5px 0.9px rgba(255, 255, 255, 0.9); 
+}
+
+tooltip,
+tooltip *,
+#tray menu {
+	color: #C1B48E;
+	background-color: #000000;
+	text-shadow: none;
+}
+
+#mode,
+#battery,
+#cpu,
+#memory,
+#disk,
+#backlight,
+#network,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+	padding: 0px 6px 0px 0px;
+}
+
+#temperature {
+	padding: 0px 3px 0px 3px;
+}
+
+#image {
+	padding: 0px 4px 2px 0px;
+}
+
+#pulseaudio {
+	padding: 0px 10px 0px 0px;
+}
+
+#pulseaudio.muted {
+    color: #C1B48E;            
+    background-color: #BA6A7B;  
+}
+
+#clock {
+	padding: 0px 3px 0px 0px;
+}
+
+#keyboard-state {
+    padding: 0px;
+    margin: 0px;
+}
+
+#keyboard-state label {
+    padding: 0px; 
+}
+
+#keyboard-state label.locked {
+    background-color: #BA6A7B; 
+    color: #C1B48E;            
+    padding: 0px 6px;          
+    margin-left: 6px;          
+    border-radius: 0px;        
+}
+
+#language {
+	padding: 0px 10px 0px 0px;
+}
+
+#tray > .needs-attention,
+#pulseaudio.muted,
+#temperature.critical,
+#privacy-item.screenshare,
+#privacy-item.audio-out {
+	-gtk-icon-effect: highlight;
+	background-color: #BA6A7B;
+}

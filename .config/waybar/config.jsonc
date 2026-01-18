@@ -1,0 +1,103 @@
+{
+  "layer": "top",
+	"position": "top",
+	"height": 24,
+	"width": 1250,
+	"spacing": 0,
+  // ===== MODULES POSITION =====
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [ 
+    "memory",
+    "cpu",
+    "pulseaudio", 
+    "hyprland/language",
+    "clock",
+    "tray"
+  ],
+
+  // ===== WORKSPACES =====
+  "hyprland/workspaces": {
+  	"active-only": false,
+  	"all-outputs": true,                
+  	"disable-scroll": true,
+  	"warp-on-scroll": false,
+  	"format": "{icon}",
+  	"format-icons": {
+    		"1": "", "2": "󰉋", "3": "󰈹", "4": "", "5": "",
+    		"6": "", "7": "", "8": "󰲮", "9": "", "10": "",
+    		"urgent": "", "focused": "", "default": ""
+  },
+  	// 6 persistent workspaces on all monitors
+  	"persistent-workspaces": {
+    		"*": 6 
+  		}
+  },
+
+  // ===== WINDOW TITLE =====
+  "hyprland/window": {
+    "format": " {title} ",
+    "max-length": 60,
+    "separate-outputs": true
+  },
+
+  // ===== FILESYSTEM (polybar fs) =====
+  "custom/fs": {
+    "exec": "df -h / | awk 'NR==2 {print \"  Free: \"$4}'",
+    "interval": 25,
+    "tooltip": false
+  },
+
+  // ===== MEMORY =====
+  "memory": {
+    "interval": 2,
+    "format": "  {percentage}% ",
+    "tooltip": true,
+    "tooltip-format": "{used:0.1f}/{total} GiB\nSwap: {swapUsed}/{swapTotal}",
+    "on-click-right": "missioncontrol"
+  },
+
+  // ===== CPU =====
+  "cpu": {
+    "interval": 2,
+    "format": "  {usage}% ",
+    "tooltip": true,
+    "on-click-right": "hyprsysteminfo"
+  },
+
+  // ===== AUDIO =====
+  "pulseaudio": {
+    "format": " 󰕾 {volume}% ",
+    "format-muted": " 󰖁 muted ",
+    "scroll-step": 5,
+    "on-click-right": "easyeffects"
+  },  
+  
+  // ===== KEYBOARD =====
+  "hyprland/language": {
+  	"format": " 󰌌 {short} ",
+  	// "keyboard-name": "at-translated-set-2-keyboard", 
+  	"on-click": "hyprctl switchxkblayout current next",
+  	"tooltip": false
+  },
+
+  // ===== DATE & TIME =====
+  "clock": {
+    "interval": 1,
+    "format": " 󰃰 {:%d-%m-%y %H:%M} ",
+    "format-alt": " 󰃰 {:%a, %b %d %Y %H:%M:%S} ",
+    "tooltip": false
+  },
+
+  // ===== SYSTEM TRAY =====
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8,
+    "show-passive-items": true
+  }
+}
+
